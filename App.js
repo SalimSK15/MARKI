@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Routes from './routes/Routes';
 
 export default function App() {
   return (
-    <Text> Debut Projet !</Text>    
+    <View style={{flex: 1}}>
+      <Routes />
+    </View>  
   );
 }
 
