@@ -10,7 +10,6 @@ const Tab = createMaterialBottomTabNavigator();
 const MaterialTab = () => {
     return (
         <Tab.Navigator
-        //   initialRouteName="routeInitial"
           activeColor={"red"}
           inactiveColor={"yellow"}
           barStyle={{ backgroundColor: "white" }}
