@@ -1,5 +1,11 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+// imporatation des icons
+import { Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+// les composants de l'ecran de navigation 
 import Home from '../../ecrans/Home/Home';
 import Notifications from '../../ecrans/Notifications/Notifications';
 import RendezVous from '../../ecrans/RendezVous/RendezVous';
@@ -20,7 +26,7 @@ const MaterialTab = () => {
             options={{
               tabBarLabel: 'Acceuil',
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home-circle-outline" color={color} size={26} />
+                <Feather name="home" size={30} color="black" />
               ),
             }}
           />
@@ -30,7 +36,7 @@ const MaterialTab = () => {
             options={{
               tabBarLabel: 'Notification',
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="bell-circle-outline" color={color} size={26} />
+                <Ionicons name="notifications-outline" size={30} color="black" />
               ),
             //   tabBarBadge: 3,
             }}
@@ -41,7 +47,7 @@ const MaterialTab = () => {
             options={{
               tabBarLabel: 'Rendez-vous',
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="calendar-month" color={color} size={26} />
+                <MaterialCommunityIcons name="calendar-month-outline" size={30} color="black" />
               ),
             }}
           />
@@ -51,7 +57,7 @@ const MaterialTab = () => {
             options={{
               tabBarLabel: 'Profil',
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="account-convert-outline" color={color} size={26} />
+                <Ionicons name="person-circle-sharp" size={30} color="black" />
               ),
             }}
           />
