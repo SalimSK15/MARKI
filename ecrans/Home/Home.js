@@ -1,37 +1,30 @@
-import { View, Text, TextInput,StyleSheet, Button,TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS } from '../../outils/constantes'
 
-import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
+
 import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 import Text_h1 from '../../composants/Text_H1/Text_h1';
+import Input_Recherche from '../../composants/InputRecherche/Input_Recherche';
 
 const Home = () => {
-
-  const [searchText, setSearchText] = useState('');
 
   return (
     <SafeAreaView  style={styles.container}>
       
-      {/* logo et num de lapplication  */}
+      {/* logo et nom de lapplication  */}
       <Logo_MARKI margin_Btm_Rgt={styles.margin_Right_Logo} style={styles.logo_Marki} />
 
       {/* le titre recherche medecin */}
       <Text_h1 />
 
       {/* bar de recherche & button loup filtrage */}
-      <View style={styles.divIconRecherche}>
-        <TextInput style={styles.inputRecherche}
-          placeholder='Recherche ...' 
-          value={searchText}
-        />
-        <View style={styles.IconRecherche}>
-          <Feather name="search" size={24} color={COLORS.White}/>
-        </View>
-      </View>
-
+      <Input_Recherche 
+        styleInputRecherche_Width={styles.styleInputRecherche_Width} 
+        styleIconRecherche={styles.styleIconRecherche}
+        icon={<Feather name="search" size={32} color={COLORS.White}/>}
+      />
 
       {/* text de presentation */}
       <View style={styles.divDescription}>
@@ -70,30 +63,11 @@ const styles = StyleSheet.create({
   margin_Right_Logo:{
     marginRight: 10
   },
-  
- 
-  divIconRecherche:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
+  styleInputRecherche_Width: {
+    width: 300
   },
-  inputRecherche:{
-    flex: 1,
-    height: 50,
-    width: 300,
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 10,
-  },
-  IconRecherche:{
-    width: 50,
-    height: 50,
-    backgroundColor: COLORS.VioletFonce,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 10,
-    marginLeft: 8,
+  styleIconRecherche:{
+    width: 70,
   },
   divDescription:{
     flexDirection: "column"
@@ -125,4 +99,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Home
+export default Home;
