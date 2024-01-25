@@ -7,6 +7,7 @@ import { Feather } from '@expo/vector-icons';
 import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 import Text_h1 from '../../composants/Text_H1/Text_h1';
 import Input_Recherche from '../../composants/InputRecherche/Input_Recherche';
+import Text_Presentation from '../../composants/Text_Presentation/Text_Presentation';
 
 const Home = () => {
 
@@ -27,19 +28,7 @@ const Home = () => {
       />
 
       {/* text de presentation */}
-      <View style={styles.divDescription}>
-      
-        <Text style={styles.TextBold}> Bienvenue sur MARKI </Text>
-
-        <Text> Inscrivez-vous chez le médecin, c'est aussi simple que ça ! </Text>
-
-        <Text><Text style={styles.TextBold}> Pourquoi Utiliser MARKI ? </Text></Text>
-
-        <Text> <Text style={styles.TextBold}> 1. Rapidite:</Text> Rendez_vous en quelques clics. </Text>
-        <Text> <Text style={styles.TextBold}> 2. Facilite:</Text> Cherchez par specialite et localisation. </Text>
-        <Text> <Text style={styles.TextBold}> 3. Rappels :</Text> Ne ratez plus jamais un Rendez_vous. </Text>
-          
-      </View>
+      <Text_Presentation />
 
       <View style={styles.divBtn}>
         <TouchableOpacity style={styles.divSinscrire}><Text style={styles.btnSinscrire}>S'inscrire</Text></TouchableOpacity>
@@ -68,12 +57,6 @@ const styles = StyleSheet.create({
   },
   styleIconRecherche:{
     width: 70,
-  },
-  divDescription:{
-    flexDirection: "column"
-  },
-  TextBold:{
-    fontWeight: 'bold',
   },
   divBtn:{
     flexDirection: 'row',
