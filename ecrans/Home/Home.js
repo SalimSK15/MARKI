@@ -6,6 +6,7 @@ import { COLORS } from '../../outils/constantes'
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
+import Text_h1 from '../../composants/Text_H1/Text_h1';
 
 const Home = () => {
 
@@ -18,9 +19,7 @@ const Home = () => {
       <Logo_MARKI margin_Btm_Rgt={styles.margin_Right_Logo} style={styles.logo_Marki} />
 
       {/* le titre recherche medecin */}
-      <View style={styles.divTitreRecherche}>
-        <Text style={styles.titreRecherche}>Recherchez un médecin</Text>
-      </View>
+      <Text_h1 />
 
       {/* bar de recherche & button loup filtrage */}
       <View style={styles.divIconRecherche}>
@@ -71,16 +70,8 @@ const styles = StyleSheet.create({
   margin_Right_Logo:{
     marginRight: 10
   },
-  divTitreRecherche:{
-    marginTop: 40,
-    marginBottom: 20,
-  },
-  titreRecherche:{
-    fontSize: 40,
-    textAlign: 'center',
-    color: COLORS.VioletFonce,
-    fontWeight: 'bold'
-  },
+  
+ 
   divIconRecherche:{
     flexDirection: 'row',
     alignItems: 'center',
