@@ -5,18 +5,17 @@ import { COLORS } from '../../outils/constantes'
 
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
+import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 
 const Home = () => {
 
   const [searchText, setSearchText] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView  style={styles.container}>
+      
       {/* logo et num de lapplication  */}
-      <View>
-        <Text> Marki </Text>
-        <FontAwesome name="heartbeat" size={30} color="black" />
-      </View>
+      <Logo_MARKI margin_Btm_Rgt={styles.margin_Right_Logo} style={styles.logo_Marki} />
 
       {/* le titre recherche medecin */}
       <View style={styles.divTitreRecherche}>
@@ -61,10 +60,19 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container:{
+    flex: 1,
     padding: 10,
+    backgroundColor: COLORS.White
+  },
+  logo_Marki:{
+    flexDirection: "row",
+    margin: 10,
+  },
+  margin_Right_Logo:{
+    marginRight: 10
   },
   divTitreRecherche:{
-    marginTop: 60,
+    marginTop: 40,
     marginBottom: 20,
   },
   titreRecherche:{
