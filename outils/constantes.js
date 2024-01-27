@@ -12,7 +12,9 @@ export const COLORS = {
     VertLime    : '#04B900',
     AquaGlacé   : '#C3FBFF',
     White       : '#FFFFFF',
-    Black       : '#000000' 
+    Black       : '#000000',
+    grise       : '#808080',
+    black_Rgba_Op_08  : "rgba(0,0,0,0.9)"
 };
 export const TEXT_SIZE = {
     title: 22,
