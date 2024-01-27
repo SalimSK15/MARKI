@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
       text_04_1:{
         fontSize: 16,
         marginBottom: 3,
-        color: COLORS.balck_Rgba_Op_08
+        color: COLORS.black_Rgba_Op_08
       },
       TextBold:{
         fontWeight: 'bold',
