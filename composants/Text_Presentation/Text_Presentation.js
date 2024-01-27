@@ -40,9 +40,8 @@ const styles = StyleSheet.create({
     divDescription:{
         flex: 1,
         flexDirection: "column",
-        // backgroundColor: "yellow",
+        marginTop: 10,
         marginBottom: 30,
-        marginTop: 30,
       },
       text_h1:{
         fontSize: 22,
