@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     width: 300
   },
   styleIconRecherche:{
-    width: 70,
+    width: 50,
   },
   divBtn:{
     flexDirection: 'row',
