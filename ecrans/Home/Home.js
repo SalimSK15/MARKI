@@ -8,6 +8,7 @@ import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 import Text_h1 from '../../composants/Text_H1/Text_h1';
 import Input_Recherche from '../../composants/InputRecherche/Input_Recherche';
 import Text_Presentation from '../../composants/Text_Presentation/Text_Presentation';
+import Btn from '../../composants/Button/Btn';
 
 const Home = () => {
 
@@ -31,8 +32,8 @@ const Home = () => {
       <Text_Presentation />
 
       <View style={styles.divBtn}>
-        <TouchableOpacity style={styles.divSinscrire}><Text style={styles.btnSinscrire}>S'inscrire</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.divSeConnecter}><Text style={styles.btnSeConnecter}>Se Connecter</Text></TouchableOpacity>
+        <Btn textBtn={"S'inscrire"}   style={styles.btnSinscrire}/>
+        <Btn textBtn={"Se Connecter"} style={styles.btnSeConnecter}/>
       </View>
 
     </SafeAreaView>
@@ -61,7 +62,8 @@ const styles = StyleSheet.create({
   divBtn:{
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: 35
   },
   btnSinscrire:{
     fontSize: 15,
@@ -79,6 +81,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: COLORS.VioletFonce,
     fontSize: 15,
+    textAlign: "center"
   }
 })
 
