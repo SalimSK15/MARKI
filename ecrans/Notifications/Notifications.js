@@ -1,14 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { COLORS } from '../../outils/constantes'
+import RendezVous_Notification from '../../composants/rendez_vous_notification/RendezVous_Notification'
 
 const Notifications = () => {
+
   return (
-    <View>
-      <Text>Notifications</Text>
+    <View style={styles.container}>
+      <RendezVous_Notification jourRestant={2}/>
+      <RendezVous_Notification jourRestant={2}/>
     </View>
   )
 }
 
-export default Notifications
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    padding: 10,
+    backgroundColor: COLORS.White
+  },
+})
+
+export default Notifications;
