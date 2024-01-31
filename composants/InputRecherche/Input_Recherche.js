@@ -22,30 +22,31 @@ const Input_Recherche = (props) => {
     )
 }
 
-export default Input_Recherche
 
 const styles = StyleSheet.create({
-    divIconRecherche:{
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 20,
-      },
-      inputRecherche:{
-        height: 50,
-        borderWidth: 2,
-        paddingLeft: 30,
-        borderRadius: 10,
-      },
-      IconRecherche:{
-        height: 50,
-        backgroundColor: COLORS.VioletFonce,
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 10,
-        marginLeft: 8,
-      },
-      textIcon:{
-        color: COLORS.White
-      }
+  divIconRecherche:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+  },
+  inputRecherche:{
+    height: 50,
+    borderWidth: 2,
+    paddingLeft: 30,
+    borderRadius: 10,
+  },
+  IconRecherche:{
+    height: 50,
+    backgroundColor: COLORS.VioletFonce,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    marginLeft: 8,
+  },
+  textIcon:{
+    color: COLORS.White
+  }
 })
+
+export default Input_Recherche;
