@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { COLORS } from '../../outils/constantes'
 
-const RendezVous_Notification = (props) => {
+const Element_Notification = (props) => {
 
     // const {nom_Docteur, Specialite, Patient, Date, Heur} = route;
 
@@ -69,4 +68,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default RendezVous_Notification;
+export default Element_Notification;
