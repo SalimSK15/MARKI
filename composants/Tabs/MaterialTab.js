@@ -1,5 +1,5 @@
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 // imporatation des icons
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -7,14 +7,15 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // les composants de l'ecran de navigation 
 import Home from '../../ecrans/Home/Home';
-import Notifications from '../../ecrans/Notifications/Notifications';
-import RendezVous from '../../ecrans/RendezVous/RendezVous';
 import Profil from '../../ecrans/Profil/Profil';
 import { COLORS } from '../../outils/constantes';
+import RendezVous from '../../ecrans/RendezVous/RendezVous';
+import Notifications from '../../ecrans/Notifications/Notifications';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const MaterialTab = () => {
+
     return (
         <Tab.Navigator
           activeColor={COLORS.neige}
@@ -24,9 +25,8 @@ const MaterialTab = () => {
           shifting={true}
         >
           <Tab.Screen
-            name="Acceuil"
+            name="Home"
             component={Home}
-            
             options={{
               tabBarLabel: 'Acceuil',
               tabBarIcon: ({ color }) => (
@@ -64,7 +64,7 @@ const MaterialTab = () => {
                 <Ionicons name="person-circle-sharp" size={30} color={COLORS.White} />  
               ),
             }}
-          />
+          />         
         </Tab.Navigator>
       );
 }
