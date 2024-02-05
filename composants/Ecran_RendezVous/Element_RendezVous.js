@@ -1,25 +1,52 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
 import { COLORS } from '../../outils/constantes'
+import { useState } from 'react';
 
 const Element_RendezVous = () => {
+
+    const [boutonsVisibles, setBoutonsVisibles] = useState(true);
+
+    const cacherBoutons = () => {
+        setBoutonsVisibles(!boutonsVisibles);
+      };
+
     return (
         <View style={styles.divNotification}>
             <View style={styles.style_Notification}>
-                <Text style={styles.Nom_Docteur}>Dr.Saheb</Text>
-                <View style={styles.infos_Docteur}>
-                    <Text style={styles.text_info}>
-                        <Text style={styles.textBold}>Spécialité : </Text>Orthopedique
-                    </Text>
-                    <Text style={styles.text_info}>
-                        <Text style={styles.textBold}>Patient : </Text>Moi meme 
-                    </Text>
-                    <Text style={styles.text_info}>
-                        <Text style={styles.textBold}>Date : </Text>25 Fevrier 2024 
-                    </Text>
-                    <Text style={styles.text_info}>
-                        <Text style={styles.textBold}>N : </Text>15h30
-                    </Text>
+                <View style={styles.container}>
+                    <View>
+                        <Text style={styles.Nom_Docteur}>Dr.Saheb</Text>
+                        <View style={styles.infos_Docteur}>
+                            <Text style={styles.text_info}>
+                                <Text style={styles.textBold}>Spécialité : </Text>Orthopedique
+                            </Text>
+                            <Text style={styles.text_info}>
+                                <Text style={styles.textBold}>Patient : </Text>Moi meme 
+                            </Text>
+                            <Text style={styles.text_info}>
+                                <Text style={styles.textBold}>Date : </Text>25 Fevrier 2024 
+                            </Text>
+                            <Text style={styles.text_info}>
+                                <Text style={styles.textBold}>N : </Text>15h30
+                            </Text>
+                        </View>
+                    </View>
+                    <TouchableOpacity style={styles.btnModifier} onPress={cacherBoutons}>
+                        <Text style={styles.text_btnModifier}>{ boutonsVisibles ? "Modifier" : "Reduire"}</Text>
+                    </TouchableOpacity> 
                 </View>
+                {
+                    !boutonsVisibles && (
+                        <View>
+                            <TouchableOpacity style={styles.changerBtn} onPress={() => console.log('sk')}>
+                                <Text style={styles.textBoutonChangeBtn}> Changer la date d'inscription </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.annulerBtn} onPress={() => alert("Veuillez confirmer l'annulation ")}>
+                                <Text style={styles.textBoutonAnnulationBtn}>Annuler mon passage</Text>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }
             </View>
         </View>
     )
@@ -37,15 +64,20 @@ const styles = StyleSheet.create({
         padding: 10
     },
     style_Notification:{
-        padding: 12,
+        padding: 10,
         borderWidth: 2,
         borderColor: COLORS.VioletRoyal,
         borderRadius: 10
     },
+    container:{
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+    },
     Nom_Docteur:{
         fontSize: 22,
         fontWeight: "bold",
-        color: COLORS.VioletFonce
+        color: COLORS.VioletFonce,
+        paddingLeft: 0
     },
     infos_Docteur:{
         paddingLeft: 15
@@ -55,6 +87,45 @@ const styles = StyleSheet.create({
     },
     textBold:{
         fontWeight: "bold"
+    },
+    btnModifier:{
+        padding: 8,
+        width: "30%",
+        borderRadius: 8,
+        alignSelf: 'flex-end',
+        backgroundColor: COLORS.VertForêt
+    },
+    text_btnModifier:{
+        color: COLORS.White,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
+    changerBtn:{
+        borderWidth: 2,
+        borderColor: COLORS.VertFoncé,
+        borderRadius: 8,
+        width: "70%",
+        padding: 3,
+        alignItems: "center",
+        marginTop: 10,
+        marginBottom: 10
+    },
+    annulerBtn:{
+        borderWidth: 2,
+        width: "70%",
+        padding: 3,
+        borderRadius: 8,
+        alignItems: "center",
+    },
+    textBoutonChangeBtn:{
+        color: COLORS.VioletFonce,
+        fontWeight: "bold",
+        fontSize: 16
+    },
+    textBoutonAnnulationBtn:{
+        fontSize: 16,
+        fontWeight: "bold",
+        color: COLORS.rouge
     }
 })
 
