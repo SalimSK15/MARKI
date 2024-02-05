@@ -15,6 +15,7 @@ export const COLORS = {
     Black       : '#000000',
     grise       : '#808080',
     neige       : '#fffafa',
+    rouge       : '#c30000',
     black_Rgba_Op_08  : "rgba(0,0,0,0.9)"
 };
 export const TEXT_SIZE = {
