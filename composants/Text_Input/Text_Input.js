@@ -5,7 +5,7 @@ const Text_Input = (props) => {
     <View style={styles.container}>
         <Text style={styles.div_textLabel}>{props.text_label}</Text>
         <TextInput
-            style={{...props.style,...styles.textInput}} 
+            style={{...props.style}} 
             placeholder={props.text_placeholder}
         />
     </View>
@@ -19,17 +19,7 @@ const styles = StyleSheet.create({
     div_textLabel:{
         fontSize: 17,
         fontWeight: "bold",
-        marginBottom: 8
     },
-    textInput:{
-        height: 50,
-        borderWidth: 2,
-        paddingLeft: 15,
-        borderTopRightRadius: 10,
-        borderBottomRightRadius: 10,
-        borderBottomLeftRadius: 5,
-        borderTopLeftRadius: 5,
-    }
 })
 
 export default Text_Input;
