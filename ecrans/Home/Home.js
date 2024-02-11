@@ -10,9 +10,13 @@ import Text_h1 from '../../composants/Text_H1/Text_h1';
 import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 import Input_Recherche from '../../composants/InputRecherche/Input_Recherche';
 import Text_Presentation from '../../composants/Text_Presentation/Text_Presentation';
+import Interface_Inscription from '../../composants/Ecran_inscription/Interface_Inscription';
 
 const Home = (props) => {
 
+  const handlePressInscription = () =>{
+    props.navigation.navigate('Inscription');
+  }
   const handlePressConnexion = () =>{
     props.navigation.navigate('Connexion');
   }
@@ -36,7 +40,7 @@ const Home = (props) => {
       <Text_Presentation />
 
       <View style={styles.divBtn}>
-        <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} />
+        <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} fonction={handlePressInscription}/>
         <Btn textBtn={"Se Connecter"} style={styles.btnSeConnecter} fonction={handlePressConnexion}/>
       </View>
 
