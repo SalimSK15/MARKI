@@ -3,7 +3,11 @@ import Text_Input from '../../composants/Text_Input/Text_Input'
 import { COLORS } from '../../outils/constantes'
 import Btn from '../../composants/Button/Btn'
 
-const Interface_Inscription = () => {
+const Interface_Inscription = (props) => {
+
+  const handlerConfirmation = () =>{
+    props.navigation.navigate('Confirmation')
+  }
   return (
     <View style={styles.container}>
       <View style={styles.container_TextInput} >
@@ -16,7 +20,7 @@ const Interface_Inscription = () => {
         <Text_Input style={styles.style_Text_Input} text_label={"Confirmer le mot de passe"} text_placeholder={"*******"} />
       </View>
       <View style={styles.container_Btn} >
-        <Btn style={styles.btnSinscrire} textBtn={"S'inscrire"} />
+        <Btn style={styles.btnSinscrire} textBtn={"S'inscrire"} fonction ={handlerConfirmation} />
       </View>
     </View>
   )
