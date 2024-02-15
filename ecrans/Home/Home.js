@@ -1,29 +1,36 @@
 import { Feather } from '@expo/vector-icons';
-
 import { View, StyleSheet } from 'react-native'
 import { COLORS } from '../../outils/constantes'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
 
 import Btn from '../../composants/Button/Btn';
 import Text_h1 from '../../composants/Text_H1/Text_h1';
 import Logo_MARKI from '../../composants/Logo/Logo_MARKI';
 import Input_Recherche from '../../composants/InputRecherche/Input_Recherche';
+import Ecran_Connecte from '../../composants/Ecran_HomeConnecte/Ecran_Connecte';
 import Text_Presentation from '../../composants/Text_Presentation/Text_Presentation';
 
-const Home = (props) => {
+const Home = ({route, navigation}) => {
 
+  const compteActife = route.params;
+  
   const handlePressInscription = () =>{
-    props.navigation.navigate('Inscription');
+    navigation.navigate('Inscription');
   }
   const handlePressConnexion = () =>{
-    props.navigation.navigate('Connexion');
+    navigation.navigate('Connexion');
   }
   return (
     <SafeAreaView  style={styles.container}>
       
-      {/* logo et nom de lapplication  */}
-      <Logo_MARKI margin_Btm_Rgt={styles.margin_Right_Logo} style={styles.logo_Marki} />
+      {
+        !compteActife && (
+          <View>
+            {/* logo et nom de lapplication  */}
+            <Logo_MARKI margin_Btm_Rgt={styles.margin_Right_Logo} style={styles.logo_Marki} />
+          </View>
+        )
+      }
 
       {/* le titre recherche medecin */}
       <Text_h1 /> 
@@ -34,14 +41,22 @@ const Home = (props) => {
         styleIconRecherche={styles.styleIconRecherche}
         icon={<Feather name="search" size={32} color={COLORS.White}/>}
       />
+      {/* affichage de lecran si compte est actif */}
+      {compteActife && <Ecran_Connecte />}
 
       {/* text de presentation */}
-      <Text_Presentation />
+      {!compteActife && <Text_Presentation />}
 
-      <View style={styles.divBtn}>
-        <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} fonction={handlePressInscription}/>
-        <Btn textBtn={"Se Connecter"} style={styles.btnSeConnecter} fonction={handlePressConnexion}/>
-      </View>
+      {
+        !compteActife && (
+          <View>
+            <View style={styles.divBtn}>
+              <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} fonction={handlePressInscription}/>
+              <Btn textBtn={"Se Connecter"} style={styles.btnSeConnecter} fonction={handlePressConnexion}/>
+            </View>
+          </View>
+        ) 
+      }
 
     </SafeAreaView>
   )
