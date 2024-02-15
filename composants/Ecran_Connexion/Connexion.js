@@ -2,14 +2,18 @@ import Btn from '../Button/Btn'
 import { StyleSheet, View } from 'react-native'
 import { COLORS } from '../../outils/constantes'
 import Text_Input from '../Text_Input/Text_Input'
+import { useState } from 'react'
 
-const Connexion = (props) => {
+const Connexion = ({navigation}) => {
+
+  const [compteActife, setCompteActife] = useState(false);
 
   const handlePressConnexion = () =>{
-    props.navigation.navigate('Home');
+    setCompteActife(true)
+    navigation.navigate('Home',{compteActife});   
   }
   const handlePressInscription = () =>{
-    props.navigation.navigate('Inscription');
+    navigation.navigate('Inscription');
   }
   
   return (
