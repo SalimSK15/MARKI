@@ -2,21 +2,29 @@ import Btn from '../Button/Btn'
 import { StyleSheet, View } from 'react-native'
 import { COLORS } from '../../outils/constantes'
 import Text_Input from '../Text_Input/Text_Input'
+import { useState } from 'react'
 
-const Connexion = (props) => {
+const Connexion = ({navigation}) => {
+
+  const [compteActife, setCompteActife] = useState(false);
 
   const handlePressConnexion = () =>{
-    props.navigation.navigate('Home');
+    setCompteActife(true)
+    navigation.navigate('Home',{compteActife});   
   }
+  const handlePressInscription = () =>{
+    navigation.navigate('Inscription');
+  }
+  
   return (
     <View style={styles.container}>
       <View style={styles.divContainer}>
-          <Text_Input text_label={"Email"} text_placeholder={"Exemple@exemple.com"}/>
-          <Text_Input text_label={"Password"} text_placeholder={""}/>
+          <Text_Input style={styles.style_Text_Input} text_label={"Email"} text_placeholder={"Exemple@exemple.com"}/>
+          <Text_Input style={styles.style_Text_Input} text_label={"Password"} text_placeholder={""}/>
           <Btn textBtn={"Se Connecter"} style={styles.btnSeConnecter} fonction={handlePressConnexion} />
           <View style={styles.divBtn}>
             <Btn textBtn={"Mot de passe oublié"} style={styles.btnMotDePass} />
-            <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} />
+            <Btn textBtn={"S'inscrire"} style={styles.btnSinscrire} fonction={handlePressInscription}/>
           </View>
       </View>
     </View>
@@ -32,6 +40,15 @@ const styles = StyleSheet.create({
   divContainer:{
     padding: 10,
     width: "100%",
+  },
+  style_Text_Input:{
+    height: 45,
+    borderWidth: 1,
+    paddingLeft: 15,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
   },
   divBtn:{
     marginBottom: 35,
