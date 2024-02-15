@@ -1,12 +1,14 @@
 
 import React, { useState } from 'react'
-import { StyleSheet, TextInput, Text, View } from 'react-native'
+import { StyleSheet, TextInput, Text, View, Pressable, Alert } from 'react-native'
 import { COLORS } from '../../outils/constantes'
 
 const Input_Recherche = (props) => {
 
     const [searchText, setSearchText] = useState('');
-
+    const handleRecherche = () =>{
+      console.log(Alert.alert("cette methode est en cours de devloppement Merci "));
+    }
     return (
         <View style={styles.divIconRecherche}>
             <TextInput 
@@ -14,8 +16,11 @@ const Input_Recherche = (props) => {
                 placeholder='Recherche ...' 
                 value={searchText}
             />
-            <View style={{...props.styleIconRecherche,...styles.IconRecherche}}>
-                {props.icon}
+            <View 
+              style={{...props.styleIconRecherche,...styles.IconRecherche}}>
+                <Pressable onPress={handleRecherche}>
+                  {props.icon}
+                </Pressable>
                 {props.textIcon ? <Text style={styles.textIcon}> {props.textIcon} </Text> : ""}
             </View>
         </View>
