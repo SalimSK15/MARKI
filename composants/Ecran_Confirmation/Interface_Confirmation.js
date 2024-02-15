@@ -2,11 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import Btn from '../Button/Btn';
 import { COLORS } from '../../outils/constantes';
 import Text_Input from '../../composants/Text_Input/Text_Input'
+import { useState } from 'react';
 
-const Interface_Confirmation = (props) => {
+const Interface_Confirmation = ({navigation}) => {
+
+  const [compteActife, setCompteActife] = useState(false);
 
   const handlePressConfirmation = () =>{
-    props.navigation.navigate('Home');
+    setCompteActife(true)
+    navigation.navigate('Home',{compteActife});
   }
 
   return (
