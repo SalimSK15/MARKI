@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, Image, FlatList, Pressable } from 'react-native'
+import { useState } from 'react';
+import { COLORS } from '../../outils/constantes';
 import Input_Recherche from '../InputRecherche/Input_Recherche';
 import { donneesMedecins } from '../../assets/donneesMedecins/donneesMedecins';
-import { COLORS } from '../../outils/constantes';
-import { useState } from 'react';
+import { StyleSheet, Text, View, Image, FlatList, Pressable } from 'react-native'
 import Interface_Recherche_Maps from '../Recherche_Maps/Interface_Recherche_Maps';
 
 const Interface_Recherche = ({navigation}) => {
