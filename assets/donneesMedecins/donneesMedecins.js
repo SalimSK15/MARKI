@@ -1,6 +1,6 @@
 export const donneesMedecins = [
   {
-    id: 1,
+    id: "1",
     nomPrenom: "DR K.SERKHANR",
     specialite: "Medecine interne",
     telephone: "21326103949",
@@ -8,15 +8,16 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/u4pz4WMnww4jpsBPA",
   },
   {
-    id: 2,
+    id: "2",
     nomPrenom: "Dr Saheb",
     specialite: "Dermatologie",
     telephone: "21326115970",
     adresse: "1 Rue des Frères Beggaz-bloc C, Algeria",
     lienMaps: "https://maps.app.goo.gl/oCp2R8WgFSpqRnEk7",
+    email: "dr.mariedubois@example.com"
   },
   {
-    id: 3,
+    id: "3",
     nomPrenom: "DR Meridji",
     specialite: "Clinique dentaire",
     telephone: "21326182264",
@@ -24,7 +25,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/UuJjGQ1MFqEaC7Sb6",
   },
   {
-    id: 4,
+    id: "4",
     nomPrenom: "Dr Mahammed",
     specialite: "Cabinet dentaire",
     telephone: "213792114662",
@@ -32,7 +33,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/SKzuUBKUf2NWczHA8",
   },
   {
-    id: 5,
+    id: "5",
     nomPrenom: "Dr Arezki MOSTEFAI",
     specialite: "ORTHOPÉDIE TRAUMATOLOGIE",
     telephone: "21326110173",
@@ -40,7 +41,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/bgZw6Jje51jji8BdA",
   },
   {
-    id: 6,
+    id: "6",
     nomPrenom: "Dr DAHLIZ Eps. DJOUADI",
     specialite: "Cabinet de médecine interne",
     telephone: "213698082123",
@@ -48,7 +49,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/idMvcwDMJfGZ24ZR8",
   },
   {
-    id: 7,
+    id: "7",
     nomPrenom: "Tahraoui Sadia",
     specialite: "Gynecologie",
     telephone: "213776256814",
@@ -56,7 +57,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/9wsTRXgikEqzT2Hj8",
   },
   {
-    id: 8,
+    id: "8",
     nomPrenom: "Dr senani karim",
     specialite: "Centre de reeducation Fonctionnel",
     telephone: "21344921522",
@@ -64,7 +65,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/crRxHGHU7AESRJJQ9",
   },
   {
-    id: 9,
+    id: "9",
     nomPrenom: "Dr Ousmer",
     specialite: "Endocrinologue Diabetologue",
     telephone: "21326196601",
@@ -72,7 +73,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/nqsrMySWfKiWfj8u6",
   },
   {
-    id: 10,
+    id: "10",
     nomPrenom: "Dr Fatiha KACI",
     specialite: "Allergologue",
     telephone: "213664530444",
@@ -80,7 +81,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/o8PatwY8G4AYuMXV6",
   },
   {
-    id: 11,
+    id: "11",
     nomPrenom: "Dr R.BOUHERAOUA",
     specialite: "Cabinet médical de diabétologie et médecine générale",
     telephone: "213556763156",
@@ -88,7 +89,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/uiPy9BGSTcWiwZ5JA",
   },
   {
-    id: 12,
+    id: "12",
     nomPrenom: "DOCTEUR MOULOUD GOURARI",
     specialite: "Dermatologist",
     telephone: "213541896659",
@@ -96,7 +97,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/AV2yrenFWvEvBsGy6",
   },
   {
-    id: 13,
+    id: "13",
     nomPrenom: "Dr Dahmani Mrizek",
     specialite: "Neurosurgeon",
     telephone: "213553330221",
@@ -104,7 +105,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/jkSXUYCVFDk9idsp6",
   },
   {
-    id: 14,
+    id: "14",
     nomPrenom: "Dr Boudarene",
     specialite: "Psychiatrist",
     telephone: "21326116996",
@@ -112,7 +113,7 @@ export const donneesMedecins = [
     lienMaps: "https://maps.app.goo.gl/ms6fmVbyzz8XMJaX9",
   },
   {
-    id: 15,
+    id: "15",
     nomPrenom: "Dr KACI Ahmed",
     specialite: "Orthopedic surgeon",
     telephone: "213771323102",

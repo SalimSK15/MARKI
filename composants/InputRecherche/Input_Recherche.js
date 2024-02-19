@@ -6,27 +6,24 @@ import { COLORS } from '../../outils/constantes'
 const Input_Recherche = (props) => {
 
     const [searchText, setSearchText] = useState('');
-    const handleRecherche = () =>{
-      console.log(Alert.alert("cette methode est en cours de devloppement Merci "));
-    }
+
     return (
         <View style={styles.divIconRecherche}>
             <TextInput 
                 style={{...props.styleInputRecherche_Width,...styles.inputRecherche}}
                 placeholder='Recherche ...' 
                 value={searchText}
+                onChangeText={searchText => setSearchText(searchText)}
             />
-            <View 
+            <Pressable 
+              onPress={props.handleClickFonction}
               style={{...props.styleIconRecherche,...styles.IconRecherche}}>
-                <Pressable onPress={handleRecherche}>
                   {props.icon}
-                </Pressable>
-                {props.textIcon ? <Text style={styles.textIcon}> {props.textIcon} </Text> : ""}
-            </View>
+                  {props.textIcon ? <Text style={styles.textIcon}> {props.textIcon} </Text> : ""}
+            </Pressable>
         </View>
     )
 }
-
 
 const styles = StyleSheet.create({
   divIconRecherche:{
@@ -43,11 +40,11 @@ const styles = StyleSheet.create({
   },
   IconRecherche:{
     height: 50,
-    backgroundColor: COLORS.VioletFonce,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 10,
     marginLeft: 8,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.VioletFonce,
   },
   textIcon:{
     color: COLORS.White

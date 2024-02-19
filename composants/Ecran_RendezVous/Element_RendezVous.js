@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
-import { COLORS } from '../../outils/constantes'
 import { useState } from 'react';
+import { COLORS } from '../../outils/constantes'
+import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
 
 const Element_RendezVous = () => {
 
@@ -57,27 +57,27 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     text_h1_notification:{
-        fontWeight: "bold",
+        padding: 10,
         fontSize: 18,
-        color: COLORS.Émeraude,
+        fontWeight: "bold",
         textAlign: "center",
-        padding: 10
+        color: COLORS.Émeraude,
     },
     style_Notification:{
         padding: 10,
         borderWidth: 2,
+        borderRadius: 10,
         borderColor: COLORS.VioletRoyal,
-        borderRadius: 10
     },
     container:{
-        justifyContent: "flex-start",
         alignItems: "flex-start",
+        justifyContent: "flex-start",
     },
     Nom_Docteur:{
         fontSize: 22,
+        paddingLeft: 0,
         fontWeight: "bold",
         color: COLORS.VioletFonce,
-        paddingLeft: 0
     },
     infos_Docteur:{
         paddingLeft: 15
@@ -96,31 +96,31 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.VertForêt
     },
     text_btnModifier:{
-        color: COLORS.White,
         fontWeight: "bold",
         textAlign: "center",
+        color: COLORS.White,
     },
     changerBtn:{
-        borderWidth: 2,
-        borderColor: COLORS.VertFoncé,
-        borderRadius: 8,
-        width: "70%",
         padding: 3,
-        alignItems: "center",
+        width: "70%",
         marginTop: 10,
-        marginBottom: 10
+        borderWidth: 2,
+        borderRadius: 8,
+        marginBottom: 10,
+        alignItems: "center",
+        borderColor: COLORS.VertFoncé,
     },
     annulerBtn:{
-        borderWidth: 2,
-        width: "70%",
         padding: 3,
+        width: "70%",
+        borderWidth: 2,
         borderRadius: 8,
         alignItems: "center",
     },
     textBoutonChangeBtn:{
-        color: COLORS.VioletFonce,
+        fontSize: 16,
         fontWeight: "bold",
-        fontSize: 16
+        color: COLORS.VioletFonce,
     },
     textBoutonAnnulationBtn:{
         fontSize: 16,
