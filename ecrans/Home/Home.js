@@ -20,8 +20,12 @@ const Home = ({route, navigation}) => {
   const handlePressConnexion = () =>{
     navigation.navigate('Connexion');
   }
+  const handleRecherche = () =>{
+    navigation.navigate('Recherche');
+  }
+  
   return (
-    <SafeAreaView  style={styles.container}>
+    <SafeAreaView style={styles.container}>
       
       {
         !compteActife && (
@@ -37,6 +41,7 @@ const Home = ({route, navigation}) => {
 
       {/* bar de recherche & button loup filtrage */}
       <Input_Recherche 
+        handleClickFonction={handleRecherche}
         styleInputRecherche_Width={styles.styleInputRecherche_Width} 
         styleIconRecherche={styles.styleIconRecherche}
         icon={<Feather name="search" size={32} color={COLORS.White}/>}
